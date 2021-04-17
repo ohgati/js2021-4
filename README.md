@@ -1,3 +1,128 @@
+# 4월 13일 학습내용
+## 익명함수
+* 기본형태 
+> let <함수이름> = function () {};
+
+        let root = function () {
+                console.log("함수의 첫번쨰 줄");
+                console.log("함수의 두번쨰 줄");
+        };
+        root ();
+        console.log(root);
+        => 함수의 첫번쨰 줄
+           함수의 두번쨰 줄
+* 함수 내부의 코드 덩어리를 만들고 console.log로 함수 내부의 코드 덩어리를 불러온다
+* 이름이 없는 함수라서 이름이 출력 되지 않는다
+## 선언적 함수
+* 기본형태
+> function <함수이름> {  }
+
+        function root () {
+                console.log("함수의 첫번쨰 줄");
+                console.log("함수의 두번쨰 줄");
+        };
+        root ();
+        console.log(root);
+        => 함수의 첫번쨰 줄
+           함수의 두번쨰 줄
+           [Function: 함수]
+* 익명함수와 달리 이름까지 출력되서 나온다
+## 화살표 함수
+* 기본형태
+> () => { }
+
+        let root = () => {
+                console.log("함수의 첫번쨰 줄");
+                console.log("함수의 두번쨰 줄");
+        };
+        root ();
+        console.log(root);
+        => 함수의 첫번쨰 줄
+           함수의 두번쨰 줄
+           [Function]
+ * 대부분의 익명 함수 코드는 화살표 함수로 대체할수 있다
+
+## 함수의 기본형태
+* 기본형태
+
+        function <함수이름> (<매개변수>) {
+                <함수 코드>
+                return <리턴 값>
+        }        
+
+* 매개 변수를 넣으면 메소드 내부에서 특정한 처리를 수행하고 값을 반환하는것
+
+        function power(x) {
+                return x * x
+        }
+        console.log(power(10));
+        console.log(power(20));
+        => 100
+           400
+
+* 함수는 매개변수를 여러개 가질수도 있습니다
+
+        function power(x) {
+                return x * y
+        }
+        console.log(power(10, 20));
+        console.log(power(20, 30));
+        => 200
+           600
+
+## 함수의 기본 활용 형태
+* 기본형태
+
+        function (<매개변수>, <매개변수>) {
+                let output = <초깃값>;
+                // output 계산
+                return output;
+        }        
+* 예시
+
+        function sum(min, max) {
+                let output = 0;
+                for (let i >= min; i <= max; i++) {
+                        output += i;
+                }
+                return output;
+        }
+        console.log(sum(1, 100));
+        => 5050
+
+## 함수 매개 변수 초기화
+* 매개변수를 입력하지 않아도 함수가 호출됩니다
+* 매개 변수가 underfined인지 확읺하고 underfined일 때 문제가 발생한다면 따로 처리한다.
+        
+        function print(name, count) {
+                console.log('$(name)이/가 $(count)개 있습니다.')
+        }
+        print ("사과", 10);
+        print ("사과");
+        => 사과이/가 10개 있습니다
+
+## 콜백함수
+* 함수를 변수에 저장할 수 있어 함수의 매개 변수로 전달할 수 있는 함수
+
+        fuction callTenTimes(callback) {
+                for (let i = 0; i < 5; i++) {
+                        callback;
+                }
+        }
+        callTenTimes(function()) {
+                console.log('함수호출');
+        });
+        => 함수호출
+           함수호출
+           함수호출
+           함수호출
+           함수호출
+
+## 표준 내장 함수
+* 숫자 변환 함수 : 문자를 숫자로 변환하는 함수로 parseInt() 함수와 ParseInt () 함수를 제공
+> parseInt() : 문자열을 정수로 변환합니다
+
+> ParseInt () : 문자열을 실수로 변환합니다
 # 4월 6일 학습내용 요약
 ## 역 for 반복문
 * 배열 반복을 뒤에서부터 실행해야 할때가 있다. 이떄 사용한다
