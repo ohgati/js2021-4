@@ -1,3 +1,70 @@
+# 5월 4일 학습내용 요약
+## 생성자 함수
+* 객체를 만드는 함수입니다
+
+        function Product(name, prcie) {
+                this.name = name;
+                this.price = prcie;
+        }
+
+## 프로토타입
+* 모든함수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을때만 의미가 있습니다
+
+        function Product(name, price) {
+                this.name = name;
+                this.price = prcie;
+        }
+
+        Product.prototype.print = function {
+                console.log('$(product.name)의 가격은 $(product.price)원입니다.');
+        }
+        let product = new Product("바나나", 1200);
+        product.print();
+
+## 기본 자료형과 객체 자료형의 차이
+* 숫자,문자열,블을 기본 자료형이라고 합니다
+
+        let number = 273;
+        let string = '안녕하세요';
+        let boolean = true;
+
+        console.log(type of number);
+        console.log(type of string);
+        console.log(type of boolean);
+* 기본 자료형은 객체가 아니므로 속성과 메소드를 추가할 수 없습니다.
+
+## Number 객체
+* 자바스크립트에서 숫자를 표현할때 사용
+
+        let numberFromLiteral = 273
+        let numberFromConstructor = new Number(273);
+
+* <메소드>
+> toExponential() : 숫자를 지수 표시로 나타낸 문자열을 리턴합니다
+
+> toFixed() : 숫자를 고정소수점 표시로 나타낸 문자열을 리턴합니다
+
+> toPrecision() : 숫자를 길이에 따라 지수표시 또는 고정소수점 표시로 나타낸 문자열을 리턴합니다
+
+* 생성자 함수의 속성
+> MAX_VALUE : 자바스크립트의 숫자가 나타낼 수 있는 최대 숫자
+
+> MIN_VALUE : 자바스크립트의 숫자가 나타낼 수 있는 최소 숫자
+
+> Nan : 자바스크립트의 숫자로 나타낼 수 없는 숫자
+
+> POSITIVE_INFINITY : 양의 무한대숫자
+
+> NEGATIVE_INFINITY : 음의 무한대숫자
+
+## String 객체
+* 자바스크립트에서 가장 많이 사용하는 내장 객체
+
+* <메소드>
+> length : 문자열의 길이를 나타냅니다
+
+* 자기 자신을 변화시키는 메소드를 파괴적 메소드라고 하고 자기 자신을 변화시키지 않은 리턴하는 메소드를 비파괴적 메소드라고 한다
+
 # 4월 27일 수업 내용 요약
 ## 객체
 * 여러개의 자료형을 한번에 저장하는 자료형
